@@ -1,0 +1,224 @@
+
+body { 
+    font-family: 'Arial', sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background: #f8f8f8; 
+    color: #333;
+    line-height: 1.6;
+}
+.container { 
+    max-width: 1200px; 
+    margin: 20px auto; 
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding-bottom: 15px; 
+    border-bottom: 2px solid #0056b3;
+    margin-bottom: 20px;
+}
+h1 { 
+    color: #0056b3; 
+    font-size: 1.8rem;
+}
+
+/* Navigation */
+nav a, nav button { 
+    text-decoration: none; 
+    color: white; 
+    padding: 8px 15px; 
+    border-radius: 4px; 
+    background: #007bff; 
+    border: none; 
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 0.9rem;
+}
+nav a:hover, nav button:hover { 
+    background: #0056b3; 
+}
+
+/* Forms */
+.form-container { 
+    max-width: 450px; 
+    margin: 50px auto; 
+    padding: 30px; 
+    background: white; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+form label { 
+    display: block; 
+    margin-top: 10px; 
+    font-weight: bold; 
+}
+form input, form textarea, form select { 
+    width: 100%; 
+    padding: 10px; 
+    margin-top: 5px; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    box-sizing: border-box;
+}
+form button { 
+    background: #28a745; 
+    color: white; 
+    padding: 10px 15px; 
+    margin-top: 20px; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+}
+form button:hover { 
+    background: #1e7e34; 
+}
+
+/* Product Grid */
+.product-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 25px; 
+    margin: 30px 0;
+}
+.product-card { 
+    border: 1px solid #e0e0e0; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
+    background: #fff;
+    transition: transform 0.2s;
+}
+.product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+.product-card h3 { 
+    color: #007bff; 
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.product-card .price {
+    font-weight: bold;
+    color: #dc3545;
+    font-size: 1.1rem;
+}
+.out-of-stock {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Cart Overlay */
+.cart { 
+    position: fixed; 
+    right: -350px; 
+    top: 0; 
+    height: 100%;
+    width: 320px; 
+    background: #fff; 
+    padding: 20px; 
+    border-left: 1px solid #ccc; 
+    box-shadow: -4px 0 10px rgba(0,0,0,0.1); 
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+.cart.open { 
+    right: 0; 
+}
+.cart h3 { 
+    border-bottom: 2px solid #eee; 
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+.cart ul {
+    list-style: none;
+    padding: 0;
+}
+.cart li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+/* Manager Table */
+#productTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+#productTable th, #productTable td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+#productTable th {
+    background: #f4f4f4;
+}
+
+/* Status Messages */
+.status-message {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+.status-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+.status-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+@media (max-width: 768px) {
+    .product-grid { grid-template-columns: 1fr; }
+    header { flex-direction: column; align-items: flex-start; }
+    nav { margin-top: 10px; }
+    .cart { width: 100%; right: -100%; }
+    .cart.open { right: 0; }
+}
+
+
+.back-link {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+.back-link a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.back-link a:hover {
+    text-decoration: underline;
+}
+/* STATUS MESSAGE STYLING (For Login/Register Pages) */
+
+.status-message {
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.status-message.error {
+    background-color: #fcebeb; 
+    color: #a00000;          
+    border: 1px solid #e57373; 
+}
+
+.status-message.success {
+    background-color: #e9fbe9; 
+    color: #1e8449;          
+    border: 1px solid #81c784; 
+}

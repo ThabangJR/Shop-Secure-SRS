@@ -2,7 +2,7 @@
 
 ShopSecure SRS is a web-based e-commerce and inventory management system. It combines a PHP frontend/API with a Java-based reporting engine to provide secure transactions and detailed inventory analytics.
 
-🛒 Core Features
+### 🛒 Core Features
 Shopping Cart & Checkout: Full session-based cart management (cart_handler.php).
 
 User Authentication: Secure login and registration system.
@@ -13,20 +13,20 @@ Java Inventory Reporting: A dedicated Java utility (InventoryReporter) that gene
 
 Product API: A lightweight backend (product_api.php) to serve product data to the frontend.
 
-🛠️ Tech Stack
+### 🛠️ Tech Stack
 Languages: PHP, Java, JavaScript, HTML/CSS
 
 Database: MySQL
 
 Java Library: MySQL Connector/J 9.4.0 (for database connectivity within Java)
 
-🚀 How to Run the Reporting Engine
+### 🚀 How to Run the Reporting Engine
 To run the inventory report manually from the command line:
 
 
 "java -cp ".;mysql-connector-j-9.4.0.jar" InventoryReporter"
 
-🔧 Database Configuration
+### 🔧 Database Configuration
 To connect the application to your local MySQL environment, follow these steps:
 
 ### 1. Create the Database

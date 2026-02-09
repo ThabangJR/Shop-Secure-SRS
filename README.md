@@ -21,7 +21,7 @@ Database: MySQL
 Java Library: MySQL Connector/J 9.4.0 (for database connectivity within Java)
 
 ### 🚀 How to Run the Reporting Engine
-To run the inventory report manually from the command line:
+To run the inventory report manually from the command line/terminal :
 
 
 "java -cp ".;mysql-connector-j-9.4.0.jar" InventoryReporter"

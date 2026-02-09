@@ -23,8 +23,8 @@ Java Library: MySQL Connector/J 9.4.0 (for database connectivity within Java)
 🚀 How to Run the Reporting Engine
 To run the inventory report manually from the command line:
 
-Bash
-java -cp ".;mysql-connector-j-9.4.0.jar" InventoryReporter
+
+"java -cp ".;mysql-connector-j-9.4.0.jar" InventoryReporter"
 
 🔧 Database Configuration
 To connect the application to your local MySQL environment, follow these steps:
@@ -54,6 +54,6 @@ Ensure the connection line in the source code matches your PHP settings: jdbc:my
 
 Make sure the mysql-connector-j-9.4.0.jar is in the same folder when running the reporter.
 
-# NB: default credentilas for the manager are: 
+#### NB: default credentilas for the manager are: 
 username: manager@srs.com
 password: password123

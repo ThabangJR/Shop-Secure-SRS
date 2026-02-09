@@ -29,31 +29,31 @@ To run the inventory report manually from the command line:
 🔧 Database Configuration
 To connect the application to your local MySQL environment, follow these steps:
 
-1. Create the Database
+### 1. Create the Database
 Open phpMyAdmin or your preferred MySQL terminal.
 
 Create a new database named shopsecure_db.
 
 Import the ShopSecureSRS.sql file provided in this repository to generate the required tables.
 
-2. Configure PHP Connection
+### 2. Configure PHP Connection
 Locate db_config_sample.php in the root directory.
 
 Update the following variables to match your local server credentials:
 
-PHP
+### PHP
 $host = "localhost";
 $user = "your_username";     // usually "root"
 $pass = "your_password";     // usually empty "" on XAMPP
 $db_name = "shopsecure_db";
-
-3. Configure Java Connection
+###
+### 3. Configure Java Connection
 The Java reporting engine (InventoryReporter.java) uses a JDBC connection string.
 
 Ensure the connection line in the source code matches your PHP settings: jdbc:mysql://localhost:3306/shopsecure_db
 
 Make sure the mysql-connector-j-9.4.0.jar is in the same folder when running the reporter.
 
-#### NB: default credentilas for the manager are: 
+### NB: default credentilas for the manager are: 
 username: manager@srs.com
 password: password123
